@@ -5,11 +5,11 @@
     }
     
     .weekly-detail { 
-        height: 55% !important;
+        height: 35% !important;
     }
     
     .weather-detail {
-        height: 50% !important;
+        height: 30% !important;
     } 
 }
 
