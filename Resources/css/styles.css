@@ -1,0 +1,188 @@
+/* --------------------------------------------------- */
+/* BASIC SETUP */
+/* --------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-image: url(images/cloud.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px !important;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden !important;
+    height: 100%;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* --------------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* --------------------------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto !important;
+}
+
+section {
+    padding: 50px 0;
+    color: #dddada;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px !important;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --------------------------------------------------- */
+/* HEADINGS */
+/* --------------------------------------------------- */
+
+h2 {
+    color: rgba(9, 28, 36, 0.67) !important;
+}
+
+h3 {
+    text-transform: uppercase;
+    padding: 10px 10px;
+}
+
+h4 {
+    text-transform: uppercase;
+    padding: 10px 10px;
+}
+
+/* --------------------------------------------------- */
+/* HEADER */
+/* --------------------------------------------------- */
+
+header {
+    margin-bottom: 2px;
+    background-color: rgba(0, 0, 0, 0.36);
+}
+
+.main-header {
+    background-color: rgba(0, 0, 0, 0.09);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --------------------------------------------------- */
+/* SECTION-WEATHER */
+/* --------------------------------------------------- */
+
+.weather-detail {
+    background-color: rgba(0, 0, 0, 0.27);
+    margin-bottom: 10px;
+    border: 3px solid inherit;
+    height: 45%;
+    overflow: auto;
+}
+
+.weekly-detail {
+    background-color: rgba(0, 0, 0, 0.27);
+    margin-bottom: 10px;
+    border: 3px solid inherit;
+    height: 55%;
+    overflow: auto;
+}
+
+.weekly-center {
+    text-align: center;
+}
+
+.weekly-center .col-md-3 {
+    float: none;
+    display: inline-block;
+    text-align: left;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+a {
+    cursor: pointer;
+}
+
+canvas {
+   z-index: 9999 !important; 
+}
+
+.smaller-deets {
+    font-size: 70%;
+    background-color: rgba(0, 0, 0, 0.36);
+}
+
+.weekly-detail .smaller-deets {
+    width: 60%;
+    padding: 10px 10px;
+    margin: auto;
+}
+
+.smaller-deets p {
+    font-size: 200%;
+}
+
+.smaller-deets li span {
+    color: #031821;
+}
+
+#tomLowTemp, #w1LowTemp,
+#w2LowTemp, #w3LowTemp,
+#w4LowTemp, #w5LowTemp,
+#w6LowTemp, #w7LowTemp {
+    color: #29649f;
+}
+
+#tomHighTemp, #w1HighTemp, 
+#w2HighTemp, #w3HighTemp,
+#w4HighTemp, #w5HighTemp, 
+#w6HighTemp, #w7HighTemp {
+    color: #ad1f13;
+}
+
+#curTemp,
+#hourTemp,
+#tomTemp {
+    font-size: 300%;
+}
+
+
+/* --------------------------------------------------- */
+/*  FOOTER */
+/* --------------------------------------------------- */
+
+footer {
+    font-weight: normal !important;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    vertical-align: middle !important;
+}
+
+footer p {
+    margin-bottom: 0;
+}
