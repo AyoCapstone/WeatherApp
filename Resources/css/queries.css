@@ -6,11 +6,11 @@
     }
     
     .weekly-detail { 
-        height: 30%;
+        height: 30% !important;
     }
     
     .weather-detail {
-        height: 30%;
+        height: 30% !important;
     } 
 }
 
