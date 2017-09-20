@@ -1,0 +1,260 @@
+<!DOCTYPYE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Resources/css/styles.css">
+        <link rel="stylesheet" href="Resources/css/queries.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">  
+        <link rel="stylesheet" href="Vendors/css/ionicons.min.css">
+        <link rel="stylesheet" href="Vendors/css/normalize.css">
+        <title>Ayo's Weather App</title>
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="row">
+                <h1><i class="ion-ios-thunderstorm"></i>&nbsp;HOW'S THE WEATHER?&nbsp;<i class="ion-ios-thunderstorm"></i></h1>
+            </div>
+        </header>
+        <section class="section-weather">
+            <div class="row">
+                <h2 id="location">Philadelphia, PA</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-4 weather-detail">
+                    <header><h3>Now</h3></header>
+                    <p id="curSummary"></p>
+                    <p id="curTime"></p>
+                    <figure class="col-md-6 col-sm-6">
+                        <canvas id="curIcon" width="150" height="150"></canvas>
+                    </figure>
+                    <div class="col-md-6 col-sm-6 smaller-deets">
+                        <p id="curTemp"></p>
+                        <ul>
+                            <li>Wind speed: <span id="curWindSpeed"></span></li>
+                            <li>Feels like: <span id="curAppTemp"></span></li>
+                            <li>Humidity: <span id="curHumidity"></span></li>
+                            <li>Pressure: <span id="curPressure"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 weather-detail">
+                    <header><h3>In 1 hour</span></h3></h3></header>
+                    <p id="hourSummary"></p>
+                    <figure class="col-md-6 col-sm-6">
+                        <canvas id="hourIcon" width="150" height="150"></canvas>
+                    </figure>
+                    <div class="col-md-6 col-sm-6 smaller-deets">
+                        <p id="hourTemp"></p>
+                        <ul>
+                            <li>Wind speed: <span id="hourWindSpeed"></span></li>
+                            <li>Feels like: <span id="hourAppTemp"></span></li>
+                            <li>Humidity: <span id="hourHumidity"></span></li>
+                            <li>Pressure: <span id="hourPressure"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 weather-detail">
+                    <header><h3>Tomorrow</h3></h3></header>
+                    <p id="tomSummary"></p>
+                    <figure class="col-md-6 col-sm-6">
+                        <canvas id="tomIcon" width="150" height="150"></canvas>
+                    </figure>
+                    <div class="col-md-6 col-sm-6 smaller-deets">
+                        <div class="col-md-6 col-sm-6">
+                            <h5>High</h5>
+                            <p id="tomHighTemp"></p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <h5>Low</h5>
+                            <p id="tomLowTemp"></p>
+                        </div>
+                        <ul>
+                            <li>Wind speed: <span id="tomWindSpeed"></span></li>
+                            <li>Humidity: <span id="tomHumidity"></span></li>
+                            <li>Pressure: <span id="tomPressure"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h2>Rest of the Week</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-3 weekly-detail">
+                    <header><h4 id="w1Time"></h4></header>
+                    <p id="w1Summary"></p>
+                    <figure class="col-md-6 col-sm-6">
+                        <canvas id="w1Icon" width="120" height="120"></canvas>
+                    </figure>
+                    <div class="row text-center">
+                        <div class="col-md-6 col-sm-6">
+                            <h5>High</h5>
+                            <p id="w1HighTemp"></p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <h5>Low</h5>
+                            <p id="w1LowTemp"></p>
+                        </div>
+                    </div>
+                    <ul class="smaller-deets">
+                        <li>Wind speed: <span id="w1WindSpeed"></span></li>
+                        <li>Humidity: <span id="w1Humidity"></span></li>
+                        <li>Pressure: <span id="w1Pressure"></span></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-3 weekly-detail">
+                    <header><h4 id="w2Time"></h4></header>
+                    <p id="w2Summary"></p>
+                    <figure class="col-md-6 col-sm-6">
+                        <canvas id="w2Icon" width="120" height="120"></canvas>
+                    </figure>
+                    <div class="row text-center">
+                        <div class="col-md-6 col-sm-6">
+                            <h5>High</h5>
+                            <p id="w2HighTemp"></p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <h5>Low</h5>
+                            <p id="w2LowTemp"></p>
+                        </div>
+                    </div>
+                    <ul class="smaller-deets">
+                        <li>Wind speed: <span id="w2WindSpeed"></span></li>
+                        <li>Humidity: <span id="w2Humidity"></span></li>
+                        <li>Pressure: <span id="w2Pressure"></span></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-3 weekly-detail">
+                    <header><h4 id="w3Time"></h4></header>
+                    <p id="w3Summary"></p>
+                    <figure class="col-md-6 col-sm-6">
+                        <canvas id="w3Icon" width="120" height="120"></canvas>
+                    </figure>
+                    <div class="row text-center">
+                        <div class="col-md-6 col-sm-6">
+                            <h5>High</h5>
+                            <p id="w3HighTemp"></p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <h5>Low</h5>
+                            <p id="w3LowTemp"></p>
+                        </div>
+                    </div>
+                    <ul class="smaller-deets">
+                        <li>Wind speed: <span id="w3WindSpeed"></span></li>
+                        <li>Humidity: <span id="w3Humidity"></span></li>
+                        <li>Pressure: <span id="w3Pressure"></span></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-3 weekly-detail">
+                    <header><h4 id="w4Time"></h4></header>
+                    <p id="w4Summary"></p>
+                    <figure class="col-md-6 col-sm-6">
+                        <canvas id="w4Icon" width="120" height="120"></canvas>
+                    </figure>
+                    <div class="row text-center">
+                        <div class="col-md-6 col-sm-6">
+                            <h5>High</h5>
+                            <p id="w4HighTemp"></p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <h5>Low</h5>
+                            <p id="w4LowTemp"></p>
+                        </div>
+                    </div>
+                    <ul class="smaller-deets">
+                        <li>Wind speed: <span id="w4WindSpeed"></span></li>
+                        <li>Humidity: <span id="w4Humidity"></span></li>
+                        <li>Pressure: <span id="w4Pressure"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="row weekly-center">
+                <div class="col-md-3 col-sm-3 col-xs-12 weekly-detail clearfix">
+                    <header><h4 id="w5Time"></h4></header>
+                    <p id="w5Summary"></p>
+                    <figure class="col-md-6 col-sm-6">
+                        <canvas id="w5Icon" width="120" height="120"></canvas>
+                    </figure>
+                    <div class="row text-center">
+                        <div class="col-md-6 col-sm-6">
+                            <h5>High</h5>
+                            <p id="w5HighTemp"></p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <h5>Low</h5>
+                            <p id="w5LowTemp"></p>
+                        </div>
+                    </div>
+                    <ul class="smaller-deets">
+                        <li>Wind speed: <span id="w5WindSpeed"></span></li>
+                        <li>Humidity: <span id="w5Humidity"></span></li>
+                        <li>Pressure: <span id="w5Pressure"></span></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-3 weekly-detail clearfix">
+                    <header><h4 id="w6Time"></h4></header>
+                    <p id="w6Summary"></p>
+                    <figure class="col-md-6 col-sm-6">
+                        <canvas id="w6Icon" width="120" height="120"></canvas>
+                    </figure>
+                    <div class="row text-center">
+                        <div class="col-md-6 col-sm-6">
+                            <h5>High</h5>
+                            <p id="w6HighTemp"></p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <h5>Low</h5>
+                            <p id="w6LowTemp"></p>
+                        </div>
+                    </div>
+                    <ul class="smaller-deets">
+                        <li>Wind speed: <span id="w6WindSpeed"></span></li>
+                        <li>Humidity: <span id="w6Humidity"></span></li>
+                        <li>Pressure: <span id="w6Pressure"></span></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-3 weekly-detail">
+                    <header><h4 id="w7Time"></h4></header>
+                    <p id="w7Summary"></p>
+                    <figure class="col-md-6 col-sm-6">
+                        <canvas id="w7Icon" width="120" height="120"></canvas>
+                    </figure>
+                    <div class="row text-center">
+                        <div class="col-md-6 col-sm-6">
+                            <h5>High</h5>
+                            <p id="w7HighTemp"></p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <h5>Low</h5>
+                            <p id="w7LowTemp"></p>
+                        </div>
+                    </div>
+                    <ul class="smaller-deets">
+                        <li>Wind speed: <span id="w7WindSpeed"></span></li>
+                        <li>Humidity: <span id="w7Humidity"></span></li>
+                        <li>Pressure: <span id="w7Pressure"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="row">
+                <p>Made by <a href="https://www.linkedin.com/in/ayomide-onalaja-5a1469113/">Ayomide Onalaja</a> <br> Powered by <a href="https://darksky.net/dev">Dark Sky</a></p>
+            </div>
+        </footer>
+    </body>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://darkskyapp.github.io/skycons/skycons.js"></script>
+    <!--<script type="text/javascript" src="https://github.com/darkskyapp/skycons/blob/master/skycons.js"></script>-->
+    <script src="Resources/js/app.js"></script>
+</html>
+
