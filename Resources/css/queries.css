@@ -1,3 +1,19 @@
+@media only screen and (max-width: 3000px) {
+    .row {
+        padding: 0 2%;
+        width: 100% !important;
+    }
+    
+    .weekly-detail { 
+        height: 55% !important;
+    }
+    
+    .weather-detail {
+        height: 50% !important;
+    } 
+}
+
+
 /*----- Big tablets to 1200px: From 1024px to 1200px (widths smaller than the 1140px row) -----*/
 @media only screen and (max-width: 1200px) {
     .row {
