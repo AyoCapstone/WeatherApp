@@ -4,6 +4,14 @@
         padding: 0 2%;
         width: 100% !important;
     }
+    
+    .weekly-detail { 
+        height: 30%;
+    }
+    
+    .weather-detail {
+        height: 30%;
+    } 
 }
 
 
