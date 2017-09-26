@@ -18,7 +18,15 @@
         </header>
         <section class="section-weather">
             <div class="row">
-                <h2 id="location">Philadelphia, PA</h2>
+                <div class="col-md-8">
+                    <h2 id="location">Philadelphia, PA</h2>
+                </div>
+                <div class="col-md-3 location-textdiv">
+                    <input id="locationSearch" type="text" placeholder="Enter a location" class="form-control">
+                </div>
+                <div class="col-md-1 location-textdiv">
+                    <button type="submit" id="locationSubmit" class="ion-navigate btn btn-md btn-success">&nbsp;GO</button>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-4 weather-detail">
@@ -255,6 +263,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://darkskyapp.github.io/skycons/skycons.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGCCET4s34Zt0YxUNxEFhLZCti3DAKMoQ&libraries=places"></script>
     <!--<script type="text/javascript" src="https://github.com/darkskyapp/skycons/blob/master/skycons.js"></script>-->
     <script src="Resources/js/app.js"></script>
 </html>

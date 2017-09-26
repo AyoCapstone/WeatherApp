@@ -1,20 +1,32 @@
 $(document).ready(function() {
+    
+        var newLocation = document.getElementById('locationSearch');
+        var autocomplete = new google.maps.places.Autocomplete(newLocation);
+        var place = autocomplete.getPlace();
+        //var newLat = place.geometry.location.A();
+        //var newLong = place.geometry.location.F();
 
+        
+    
 function weather() {
-
+    
     var location = document.getElementById("location");
-    var apiKey = 'ad38988aa88b4261594ade3c95519e5a'; 
+    var darkSkyApiKey = 'ad38988aa88b4261594ade3c95519e5a'; 
     var url = 'https://api.darksky.net/forecast/';
-
+    
+    $('#locationSubmit').click(function() {
+        location.innerHTML = $('#locationSearch').val();
+    });
+    
     navigator.geolocation.getCurrentPosition(success, error);
 
     function success(position) {
       latitude = position.coords.latitude;
       longitude = position.coords.longitude;        
 
-      //location.innerHTML = 'Latitude is ' + latitude + '° Longitude is ' + longitude + '°';
+      //location.innerHTML = 'Latitude is ' + newLat + '° Longitude is ' + newLong + '°';
 
-       $.getJSON(url + apiKey + "/" + latitude + "," + longitude + "?callback=?", function(json) {    
+       $.getJSON(url + darkSkyApiKey + "/" + latitude + "," + longitude + "?callback=?", function(json) {    
            
            function formatDate(date) {
             var d = new Date(date);
@@ -142,12 +154,12 @@ function weather() {
             "clear-day", "clear-night", "partly-cloudy-day",
             "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
             "fog"
-          ],
-          i;
+          ];
+          
         //for(i = list.length; i--; )
         //icons.set(list[i], list[i]);
         //icons.play();
-        for(i = list.length; i--; ) {
+        for(var i = list.length; i--; ) {
             var weatherType = list[i],
                 elements = document.getElementsByClassName(weatherType);
             for (e = elements.length; e--;){
@@ -164,6 +176,10 @@ function weather() {
     //location.innerHTML = "Locating...";
   }
     
+    
   weather();
 
 });
+
+//AIzaSyAGCCET4s34Zt0YxUNxEFhLZCti3DAKMoQ
+

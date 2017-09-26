@@ -95,6 +95,10 @@ header {
 /* SECTION-WEATHER */
 /* --------------------------------------------------- */
 
+.location-textdiv {
+    margin-top: 18px;
+}
+
 .weather-detail {
     background-color: rgba(0, 0, 0, 0.27);
     margin-bottom: 10px;
